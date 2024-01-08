@@ -247,7 +247,7 @@ form.addEventListener("submit", (e) => {
         form.reset();
         confirmation.style.display = "none";
         sendButton.style.display = "block";
-      }, 2000); // 2000 milliseconds = 2 seconds
+      }, 4000); // 2000 milliseconds = 2 seconds
     })
     .catch((err) => {
       console.log(err);
