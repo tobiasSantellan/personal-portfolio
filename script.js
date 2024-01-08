@@ -212,7 +212,7 @@ let form = document.getElementById("form");
 
 // Get loader, confirmation message, and send button elements by their IDs and class
 let loader = document.getElementById("loader");
-let confirmacion = document.getElementById("confirmacion");
+let confirmation = document.getElementById("confirmation");
 let sendButton = form.querySelector(".btn");
 
 // Add submit event listener to the form
@@ -240,12 +240,12 @@ form.addEventListener("submit", (e) => {
       loader.style.display = "none";
 
       // Display the confirmation message
-      confirmacion.style.display = "block";
+      confirmation.style.display = "block";
 
       // Reset the form and show the send button after a brief delay (adjustable)
       setTimeout(() => {
         form.reset();
-        confirmacion.style.display = "none";
+        confirmation.style.display = "none";
         sendButton.style.display = "block";
       }, 2000); // 2000 milliseconds = 2 seconds
     })
