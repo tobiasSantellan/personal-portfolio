@@ -69,6 +69,7 @@
     right: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 3rem;
     align-items: center;
     background: var(--green-color);
