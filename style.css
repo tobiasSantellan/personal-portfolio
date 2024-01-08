@@ -110,7 +110,10 @@ header {
 
 /*  UnderLine */
 .underline {
-  position: fixed;
+  /* position: fixed;
+  height: 3px; */
+  position: absolute;
+  bottom: 20%;
   height: 3px;
   background-color: var(--shadow-color);
   transition: width 0.2s, background-color 0.5s, transform 0.5s;
