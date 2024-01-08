@@ -204,3 +204,52 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+// email section
+
+// Get form element by its ID
+let form = document.getElementById("form");
+
+// Get loader, confirmation message, and send button elements by their IDs and class
+let loader = document.getElementById("loader");
+let confirmacion = document.getElementById("confirmacion");
+let sendButton = form.querySelector(".btn");
+
+// Add submit event listener to the form
+form.addEventListener("submit", (e) => {
+  // Prevent the default form submission behavior
+  e.preventDefault();
+
+  // Display the loader
+  loader.style.display = "block";
+
+  // Hide the send button during submission
+  sendButton.style.transform = "translateY(0)";
+  sendButton.style.display = "none";
+
+  // Perform a fetch request to submit the form data to the specified endpoint
+  fetch("https://formsubmit.co/ajax/tobias.ariel.santellan@gmail.com", {
+    method: "POST",
+    body: new FormData(e.target),
+  })
+    .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+    .then((json) => {
+      console.log(json);
+
+      // Hide the loader
+      loader.style.display = "none";
+
+      // Display the confirmation message
+      confirmacion.style.display = "block";
+
+      // Reset the form and show the send button after a brief delay (adjustable)
+      setTimeout(() => {
+        form.reset();
+        confirmacion.style.display = "none";
+        sendButton.style.display = "block";
+      }, 2000); // 2000 milliseconds = 2 seconds
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});

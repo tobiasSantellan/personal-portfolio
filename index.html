@@ -196,31 +196,36 @@
         <p class="section__text__p1">Get in touch</p>
         <h1 class="title skill-text">Let's talk</h1>
 
-        <form action="index.html" method="post" class="contact-form">
+        <form  class="contact-form" id="form">
             <div class="input-wrap">
                 <input class="contact-input" autocomplete="off" name="First Name" type="text" required>
-                <label for="">First Name</label>
+                <label for="First Name">First Name</label>
                 <i class="fa-solid fa-address-card form-icon"></i>
             </div>
             <div class="input-wrap">
                 <input class="contact-input" autocomplete="off" name="Last Name" type="text" required>
-                <label for="">Last Name</label>
+                <label for="Last Name">Last Name</label>
                 <i class="fa-solid fa-address-card form-icon"></i>
             </div>
 
             <div class="input-wrap w-100">
                 <input type="email" autocomplete="off" name="Email" class="contact-input">
-                <label>Email</label>
+                <label for="Email">Email</label>
                 <i class="fa-solid fa-envelope form-icon"></i>
             </div>
 
             <div class="input-wrap textarea w-100">
                 <textarea name="Message" autocomplete="off" class="contact-input" required></textarea>
-                <label>Message</label>
+                <label for="Message">Message</label>
                 <i class="fa-solid fa-inbox form-icon"></i>
                 
             </div>
             <button class="btn btn-color-1">Send Message</button>
+                     <!-- Loader -->
+    <div id="loader" class="loader"></div>
+
+    <!-- Mensaje de Confirmación -->
+    <div id="confirmacion" style="display: none; color: var(--green-color)">¡Message sent!</div>
         </form>
 
     </section>
